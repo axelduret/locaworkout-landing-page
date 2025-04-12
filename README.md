@@ -44,12 +44,12 @@ This landing page is built with:
 
 The current code contains `<!-- TODO -->` placeholders for:
 
-- Image URLs for `og:image` and `twitter:image` tags.
-- Site URL for the `og:url` tag.
-- Favicon URL.
-- Potential Twitter account integration (`twitter:site`, `twitter:card`).
-- Actual implementation of the interactive map.
-- Backend logic for form submission (waiting list).
+- [ ] Image URLs for `og:image` and `twitter:image` tags.
+- [ ] Site URL for the `og:url` tag.
+- [ ] Favicon URL.
+- [ ] Potential Twitter account integration (`twitter:site`, `twitter:card`).
+- [x] Actual implementation of the interactive map.
+- [ ] Backend logic for form submission (waiting list).
 
 ## 🤝 Contribution
 
@@ -109,12 +109,12 @@ Cette landing page est construite avec :
 
 Le code actuel contient des placeholders `<!-- TODO -->` pour :
 
-- URL de l'image pour les balises `og:image` et `twitter:image`.
-- URL du site pour les balises `og:url`.
-- URL du favicon.
-- Intégration potentielle d'un compte Twitter (`twitter:site`, `twitter:card`).
-- Implémentation réelle de la carte interactive.
-- Logique backend pour la soumission des formulaires (liste d'attente).
+- [ ] URL de l'image pour les balises `og:image` et `twitter:image`.
+- [ ] URL du site pour les balises `og:url`.
+- [ ] URL du favicon.
+- [ ] Intégration potentielle d'un compte Twitter (`twitter:site`, `twitter:card`).
+- [x] Implémentation réelle de la carte interactive.
+- [ ] Logique backend pour la soumission des formulaires (liste d'attente).
 
 ## 🤝 Contribution
 

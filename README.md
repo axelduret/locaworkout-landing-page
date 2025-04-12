@@ -48,7 +48,7 @@ The current code contains `<!-- TODO -->` placeholders for:
 - [ ] Site URL for the `og:url` tag.
 - [ ] Favicon URL.
 - [ ] Potential Twitter account integration (`twitter:site`, `twitter:card`).
-- [x] Actual implementation of the interactive map.
+- [ ] Actual implementation of the interactive map.
 - [ ] Backend logic for form submission (waiting list).
 
 ## 🤝 Contribution
@@ -113,7 +113,7 @@ Le code actuel contient des placeholders `<!-- TODO -->` pour :
 - [ ] URL du site pour les balises `og:url`.
 - [ ] URL du favicon.
 - [ ] Intégration potentielle d'un compte Twitter (`twitter:site`, `twitter:card`).
-- [x] Implémentation réelle de la carte interactive.
+- [ ] Implémentation réelle de la carte interactive.
 - [ ] Logique backend pour la soumission des formulaires (liste d'attente).
 
 ## 🤝 Contribution

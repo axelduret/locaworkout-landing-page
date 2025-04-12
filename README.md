@@ -32,7 +32,7 @@ Locaworkout est actuellement en phase de **pré-lancement (Beta)**. Nous inviton
 - Fournir un feedback précieux pour nous aider à améliorer le service.
 - Bénéficier d'avantages exclusifs réservés aux testeurs beta (comme des fonctionnalités premium gratuites pendant 1 an après le lancement).
 
-➡️ **Rejoignez la liste d'attente via le formulaire sur la [landing page](#)** ! _(Lien vers la page déployée si disponible)_
+➡️ **Rejoignez la liste d'attente via le formulaire sur la [landing page](https://axelduret.github.io/locaworkout-landing-page/)**
 
 ---
 

@@ -33,7 +33,7 @@
             background: linear-gradient(135deg, var(--tw-gradient-from) 0%, var(--tw-gradient-to) 100%);
         }
         .map-placeholder {
-            background: linear-gradient(145deg, #fce8f1, #fad7e8);
+            background: white;
         }
         .review-card:hover {
             transform: translateY(-5px);
@@ -48,24 +48,29 @@
             100% { transform: scale(1); }
         }
         .hero-image {
-            background-image: linear-gradient(rgba(218, 23, 86, 0.7), rgba(182, 19, 72, 0.7)), url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
         }
-        .feature-image {
-            background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-        .community-image {
-            background-image: url('https://images.unsplash.com/photo-1541534741688-6078c6efb9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+        .map-image {
+            background-image: linear-gradient(rgba(249, 216, 227, 0.9), rgba(249, 216, 227, 0.9)), url('https://images.unsplash.com/photo-1651340048718-6185c00f1833?q=80&w=4770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
         }
         .beta-image {
-            background-image: linear-gradient(rgba(249, 216, 227, 0.9), rgba(249, 216, 227, 0.9)), url('https://images.unsplash.com/photo-1517649763962-0c623066f0f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-image: linear-gradient(rgba(249, 216, 227, 0.9), rgba(249, 216, 227, 0.9)), url('https://images.unsplash.com/photo-1664106588879-5480437fb30f?q=80&w=4160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
+        }
+        /* Mobile menu animation */
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .mobile-menu.open {
+            max-height: 500px;
+            transition: max-height 0.5s ease-in;
         }
     </style>
 </head>
@@ -85,11 +90,30 @@
                     <a href="#how-it-works" class="px-4 py-2 text-sm font-medium rounded-md text-raspberry hover:bg-mimi-pink">Comment ça marche</a>
                     <a href="#beta" class="px-4 py-2 text-sm font-medium rounded-md text-raspberry hover:bg-mimi-pink">Accès Beta</a>
                 </div>
-                <div class="flex items-center">
+                <div class="hidden md:flex items-center">
                     <button class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-raspberry hover:bg-amaranth-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-raspberry pulse">
                         Rejoindre la liste d'attente
                     </button>
                 </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-raspberry hover:text-amaranth-purple hover:bg-mimi-pink focus:outline-none">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu bg-white md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#features" class="block px-3 py-2 rounded-md text-base font-medium text-raspberry hover:bg-mimi-pink">Fonctionnalités</a>
+                <a href="#how-it-works" class="block px-3 py-2 rounded-md text-base font-medium text-raspberry hover:bg-mimi-pink">Comment ça marche</a>
+                <a href="#beta" class="block px-3 py-2 rounded-md text-base font-medium text-raspberry hover:bg-mimi-pink">Accès Beta</a>
+                <button class="w-full mt-2 inline-flex justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-raspberry hover:bg-amaranth-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-raspberry">
+                    Rejoindre la liste d'attente
+                </button>
             </div>
         </div>
     </nav>
@@ -101,7 +125,7 @@
                 <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white">
                     Votre lieu sportif idéal à Genève
                 </h1>
-                <p class="mt-6 max-w-lg mx-auto text-xl text-mimi-pink">
+                <p class="mt-6 max-w-lg mx-auto text-xl text-white">
                     Découvrez, évaluez et partagez les salles, clubs et installations sportives avec la communauté genevoise.
                 </p>
                 <div class="mt-10 max-w-md mx-auto sm:max-w-none sm:flex sm:justify-center">
@@ -174,7 +198,7 @@
     </div>
 
     <!-- Map Preview -->
-    <div id="how-it-works" class="feature-image">
+    <div id="how-it-works" class="map-image">
         <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
             <div class="lg:grid lg:grid-cols-2 lg:gap-8">
                 <div class="mb-8 lg:mb-0">
@@ -221,7 +245,7 @@
     </div>
 
     <!-- Reviews Section -->
-    <div class="py-12 bg-white community-image">
+    <div class="py-12 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-white bg-opacity-90">
             <div class="lg:text-center mb-12">
                 <h2 class="text-base text-raspberry font-semibold tracking-wide uppercase">Communauté Locale</h2>
@@ -239,360 +263,367 @@
                         </div>
                         <div class="ml-3">
                             <p class="text-sm font-medium text-dark-purple">Sophie M.</p>
-                            <div class="flex items-center">
-                                <div class="flex text-yellow-400">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <span class="text-xs text-gray-500 ml-1">5.0</span>
+                        <div class="flex items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
-                        </div>
-                    </div>
-                    <p class="text-eggplant">
-                        "J'ai découvert un club de tennis incroyable que je ne connaissais pas. Les avis détaillés m'ont permis de savoir exactement à quoi m'attendre avant de m'inscrire."
-                    </p>
-                </div>
-
-                <!-- Review 2 -->
-                <div class="review-card bg-white p-6 rounded-lg shadow-md transition-all duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="h-10 w-10 rounded-full bg-mimi-pink flex items-center justify-center text-raspberry">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="ml-3">
-                            <p class="text-sm font-medium text-dark-purple">Marc T.</p>
-                            <div class="flex items-center">
-                                <div class="flex text-yellow-400">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <span class="text-xs text-gray-500 ml-1">4.5</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-eggplant">
-                        "En tant que nageur, j'adore pouvoir comparer les différentes piscines et clubs aquatiques avant de choisir où m'abonner. Ça m'économise tellement de temps !"
-                    </p>
-                </div>
-
-                <!-- Review 3 -->
-                <div class="review-card bg-white p-6 rounded-lg shadow-md transition-all duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="h-10 w-10 rounded-full bg-mimi-pink flex items-center justify-center text-raspberry">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="ml-3">
-                            <p class="text-sm font-medium text-dark-purple">Jean-Luc B.</p>
-                            <div class="flex items-center">
-                                <div class="flex text-yellow-400">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
-                                <span class="text-xs text-gray-500 ml-1">4.0</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-eggplant">
-                        "La communauté est géniale. J'ai trouvé une salle de musculation parfaite pour mes besoins et fait des rencontres avec des personnes partageant les mêmes objectifs."
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Why Join Beta Section -->
-    <div id="beta" class="beta-image">
-        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
-            <div class="lg:grid lg:grid-cols-2 lg:gap-8">
-                <div class="mb-8 lg:mb-0">
-                    <h2 class="text-3xl font-extrabold text-dark-purple">
-                        Pourquoi rejoindre notre beta ?
-                    </h2>
-                    <p class="mt-4 text-lg text-eggplant">
-                        Soyez parmi les premiers à façonner l'avenir de la découverte sportive à Genève. Votre feedback influencera directement notre développement.
-                    </p>
-                    <div class="mt-8">
-                        <div class="rounded-md bg-white shadow overflow-hidden">
-                            <ul class="divide-y divide-gray-200">
-                                <li class="p-4 flex items-start">
-                                    <div class="flex-shrink-0">
-                                        <div class="h-8 w-8 rounded-full bg-mimi-pink flex items-center justify-center text-raspberry">
-                                            <i class="fas fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div class="ml-3">
-                                        <p class="text-base font-medium text-dark-purple">Accès anticipé à toutes les fonctionnalités</p>
-                                    </div>
-                                </li>
-                                <li class="p-4 flex items-start">
-                                    <div class="flex-shrink-0">
-                                        <div class="h-8 w-8 rounded-full bg-mimi-pink flex items-center justify-center text-raspberry">
-                                            <i class="fas fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div class="ml-3">
-                                        <p class="text-base font-medium text-dark-purple">Avantages exclusifs pour la communauté</p>
-                                    </div>
-                                </li>
-                                <li class="p-4 flex items-start">
-                                    <div class="flex-shrink-0">
-                                        <div class="h-8 w-8 rounded-full bg-mimi-pink flex items-center justify-center text-raspberry">
-                                            <i class="fas fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div class="ml-3">
-                                        <p class="text-base font-medium text-dark-purple">Ligne directe avec notre équipe de développement</p>
-                                    </div>
-                                </li>
-                                <li class="p-4 flex items-start">
-                                    <div class="flex-shrink-0">
-                                        <div class="h-8 w-8 rounded-full bg-mimi-pink flex items-center justify-center text-raspberry">
-                                            <i class="fas fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div class="ml-3">
-                                        <p class="text-base font-medium text-dark-purple">Fonctionnalités premium gratuites pendant 1 an</p>
-                                    </div>
-                                </li>
-                            </ul>
+                            <span class="text-xs text-gray-500 ml-1">5.0</span>
                         </div>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold text-dark-purple mb-6">Rejoignez notre liste d'attente beta</h3>
-                        <form class="space-y-6">
-                            <div>
-                                <label for="full-name" class="block text-sm font-medium text-eggplant">Nom complet</label>
-                                <input type="text" id="full-name" name="full-name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-3 px-4 focus:ring-raspberry focus:border-raspberry">
-                            </div>
-                            <div>
-                                <label for="email-address" class="block text-sm font-medium text-eggplant">Adresse email</label>
-                                <input type="email" id="email-address" name="email-address" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-3 px-4 focus:ring-raspberry focus:border-raspberry">
-                            </div>
-                            <div>
-                                <label for="sport" class="block text-sm font-medium text-eggplant">Votre sport principal</label>
-                                <select id="sport" name="sport" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-3 px-4 focus:ring-raspberry focus:border-raspberry">
-                                    <option>Tennis</option>
-                                    <option>Natation</option>
-                                    <option>Course à pied</option>
-                                    <option>Football</option>
-                                    <option>Basketball</option>
-                                    <option>Musculation</option>
-                                    <option>Yoga/Pilates</option>
-                                    <option>Autre</option>
-                                </select>
-                            </div>
-                            <div>
-                                <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-raspberry hover:bg-amaranth-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-raspberry">
-                                    Rejoindre le Programme Beta
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- FAQ Section -->
-    <div class="bg-white py-16 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            <div class="lg:text-center mb-12">
-                <h2 class="text-base text-raspberry font-semibold tracking-wide uppercase">FAQ</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-dark-purple sm:text-4xl">
-                    Questions fréquemment posées
+                <p class="text-eggplant">
+                    "J'ai découvert un club de tennis incroyable que je ne connaissais pas. Les avis détaillés m'ont permis de savoir exactement à quoi m'attendre avant de m'inscrire."
                 </p>
             </div>
 
-            <div class="mt-12">
-                <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-12">
-                    <div>
-                        <dt class="text-lg leading-6 font-medium text-dark-purple">
-                            Qu'est-ce qui différencie Locaworkout ?
-                        </dt>
-                        <dd class="mt-2 text-base text-eggplant">
-                            Nous combinons des avis communautaires avec une modération intelligente pour vous fournir des informations fiables sur les salles, clubs et installations sportives genevoises.
-                        </dd>
+            <!-- Review 2 -->
+            <div class="review-card bg-white p-6 rounded-lg shadow-md transition-all duration-300">
+                <div class="flex items-center mb-4">
+                    <div class="h-10 w-10 rounded-full bg-mimi-pink flex items-center justify-center text-raspberry">
+                        <i class="fas fa-user"></i>
                     </div>
-
-                    <div>
-                        <dt class="text-lg leading-6 font-medium text-dark-purple">
-                            Quand la version beta sera-t-elle lancée ?
-                        </dt>
-                        <dd class="mt-2 text-base text-eggplant">
-                            Nous déployons les invitations pour le MVP à partir du Q3 2025. Les premiers inscrits auront un accès prioritaire.
-                        </dd>
+                    <div class="ml-3">
+                        <p class="text-sm font-medium text-dark-purple">Marc T.</p>
+                        <div class="flex items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-xs text-gray-500 ml-1">4.5</span>
+                        </div>
                     </div>
-
-                    <div>
-                        <dt class="text-lg leading-6 font-medium text-dark-purple">
-                            Y a-t-il un coût pour rejoindre la beta ?
-                        </dt>
-                        <dd class="mt-2 text-base text-eggplant">
-                            Non, la beta est complètement gratuite. Les testeurs beta recevront même des fonctionnalités premium gratuites pendant un an après le lancement officiel en Q3 2026.
-                        </dd>
-                    </div>
-
-                    <div>
-                        <dt class="text-lg leading-6 font-medium text-dark-purple">
-                            Quels lieux sportifs sont couverts ?
-                        </dt>
-                        <dd class="mt-2 text-base text-eggplant">
-                            Tous les lieux sportifs à Genève : salles de sport, clubs privés, installations communales, piscines, terrains extérieurs, et bien d'autres. Vous pouvez suggérer des lieux lors de votre inscription.
-                        </dd>
-                    </div>
-                </dl>
+                </div>
+                <p class="text-eggplant">
+                    "En tant que nageur, j'adore pouvoir comparer les différentes piscines et clubs aquatiques avant de choisir où m'abonner. Ça m'économise tellement de temps !"
+                </p>
             </div>
-        </div>
-    </div>
 
-    <!-- Final CTA -->
-    <div class="gradient-bg from-tickle-me-pink to-raspberry">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
-            <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-                <span class="block">Prêt à transformer votre pratique sportive ?</span>
-                <span class="block text-mimi-pink">Rejoignez notre beta dès aujourd'hui.</span>
-            </h2>
-            <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-                <div class="inline-flex rounded-md shadow">
-                    <a href="#beta" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-raspberry bg-white hover:bg-mimi-pink">
-                        Commencer
-                    </a>
-                </div>
-                <div class="ml-3 inline-flex rounded-md shadow">
-                    <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-amaranth-purple hover:bg-dark-purple">
-                        En savoir plus
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="bg-dark-purple">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-                <div class="space-y-8 xl:col-span-1">
-                    <div class="flex items-center">
-                        <div class="h-8 w-8 rounded-full bg-raspberry flex items-center justify-center text-white font-bold">LW</div>
-                        <span class="ml-2 text-xl font-bold text-white">Locaworkout Genève</span>
+            <!-- Review 3 -->
+            <div class="review-card bg-white p-6 rounded-lg shadow-md transition-all duration-300">
+                <div class="flex items-center mb-4">
+                    <div class="h-10 w-10 rounded-full bg-mimi-pink flex items-center justify-center text-raspberry">
+                        <i class="fas fa-user"></i>
                     </div>
-                    <p class="text-mimi-pink text-base">
-                        Aider les sportifs genevois à trouver leur lieu d'entraînement idéal depuis 2025.
-                    </p>
-                    <div class="flex space-x-6">
-                        <a href="#" class="text-mimi-pink hover:text-white">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="text-mimi-pink hover:text-white">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="text-mimi-pink hover:text-white">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
-                    <div class="md:grid md:grid-cols-2 md:gap-8">
-                        <div>
-                            <h3 class="text-sm font-semibold text-mimi-pink tracking-wider uppercase">
-                                Produit
-                            </h3>
-                            <ul class="mt-4 space-y-4">
-                                <li>
-                                    <a href="#features" class="text-base text-mimi-pink hover:text-white">
-                                        Fonctionnalités
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-base text-mimi-pink hover:text-white">
-                                        Tarifs
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#beta" class="text-base text-mimi-pink hover:text-white">
-                                        Beta
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="mt-12 md:mt-0">
-                            <h3 class="text-sm font-semibold text-mimi-pink tracking-wider uppercase">
-                                Société
-                            </h3>
-                            <ul class="mt-4 space-y-4">
-                                <li>
-                                    <a href="#" class="text-base text-mimi-pink hover:text-white">
-                                        À propos
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-base text-mimi-pink hover:text-white">
-                                        Blog
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-base text-mimi-pink hover:text-white">
-                                        Emplois
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="md:grid md:grid-cols-2 md:gap-8">
-                        <div>
-                            <h3 class="text-sm font-semibold text-mimi-pink tracking-wider uppercase">
-                                Légal
-                            </h3>
-                            <ul class="mt-4 space-y-4">
-                                <li>
-                                    <a href="#" class="text-base text-mimi-pink hover:text-white">
-                                        Confidentialité
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-base text-mimi-pink hover:text-white">
-                                        Conditions
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="mt-12 md:mt-0">
-                            <h3 class="text-sm font-semibold text-mimi-pink tracking-wider uppercase">
-                                Support
-                            </h3>
-                            <ul class="mt-4 space-y-4">
-                                <li>
-                                    <a href="#" class="text-base text-mimi-pink hover:text-white">
-                                        Contact
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-base text-mimi-pink hover:text-white">
-                                        Centre d'aide
-                                    </a>
-                                </li>
-                            </ul>
+                    <div class="ml-3">
+                        <p class="text-sm font-medium text-dark-purple">Jean-Luc B.</p>
+                        <div class="flex items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-xs text-gray-500 ml-1">4.0</span>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="mt-12 border-t border-amaranth-purple pt-8">
-                <p class="text-base text-mimi-pink text-center">
-                    &copy; 2025 Locaworkout Genève. Tous droits réservés.
+                <p class="text-eggplant">
+                    "La communauté est géniale. J'ai trouvé une salle de musculation parfaite pour mes besoins et fait des rencontres avec des personnes partageant les mêmes objectifs."
                 </p>
             </div>
         </div>
-    </footer>
+    </div>
+</div>
+
+<!-- Why Join Beta Section -->
+<div id="beta" class="beta-image">
+    <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-8">
+            <div class="mb-8 lg:mb-0">
+                <h2 class="text-3xl font-extrabold text-dark-purple">
+                    Pourquoi rejoindre notre beta ?
+                </h2>
+                <p class="mt-4 text-lg text-eggplant">
+                    Soyez parmi les premiers à façonner l'avenir de la découverte sportive à Genève. Votre feedback influencera directement notre développement.
+                </p>
+                <div class="mt-8">
+                    <div class="rounded-md bg-white shadow overflow-hidden">
+                        <ul class="divide-y divide-gray-200">
+                            <li class="p-4 flex items-start">
+                                <div class="flex-shrink-0">
+                                    <div class="h-8 w-8 rounded-full bg-mimi-pink flex items-center justify-center text-raspberry">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-base font-medium text-dark-purple">Accès anticipé à toutes les fonctionnalités</p>
+                                </div>
+                            </li>
+                            <li class="p-4 flex items-start">
+                                <div class="flex-shrink-0">
+                                    <div class="h-8 w-8 rounded-full bg-mimi-pink flex items-center justify-center text-raspberry">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-base font-medium text-dark-purple">Avantages exclusifs pour la communauté</p>
+                                </div>
+                            </li>
+                            <li class="p-4 flex items-start">
+                                <div class="flex-shrink-0">
+                                    <div class="h-8 w-8 rounded-full bg-mimi-pink flex items-center justify-center text-raspberry">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-base font-medium text-dark-purple">Ligne directe avec notre équipe de développement</p>
+                                </div>
+                            </li>
+                            <li class="p-4 flex items-start">
+                                <div class="flex-shrink-0">
+                                    <div class="h-8 w-8 rounded-full bg-mimi-pink flex items-center justify-center text-raspberry">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-base font-medium text-dark-purple">Fonctionnalités premium gratuites pendant 1 an</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-dark-purple mb-6">Rejoignez notre liste d'attente beta</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="full-name" class="block text-sm font-medium text-eggplant">Nom complet</label>
+                            <input type="text" id="full-name" name="full-name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-3 px-4 focus:ring-raspberry focus:border-raspberry">
+                        </div>
+                        <div>
+                            <label for="email-address" class="block text-sm font-medium text-eggplant">Adresse email</label>
+                            <input type="email" id="email-address" name="email-address" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-3 px-4 focus:ring-raspberry focus:border-raspberry">
+                        </div>
+                        <div>
+                            <label for="sport" class="block text-sm font-medium text-eggplant">Votre sport principal</label>
+                            <select id="sport" name="sport" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-3 px-4 focus:ring-raspberry focus:border-raspberry">
+                                <option>Tennis</option>
+                                <option>Natation</option>
+                                <option>Course à pied</option>
+                                <option>Football</option>
+                                <option>Basketball</option>
+                                <option>Musculation</option>
+                                <option>Yoga/Pilates</option>
+                                <option>Autre</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-raspberry hover:bg-amaranth-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-raspberry">
+                                Rejoindre le Programme Beta
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FAQ Section -->
+<div class="bg-white py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="lg:text-center mb-12">
+            <h2 class="text-base text-raspberry font-semibold tracking-wide uppercase">FAQ</h2>
+            <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-dark-purple sm:text-4xl">
+                Questions fréquemment posées
+            </p>
+        </div>
+
+        <div class="mt-12">
+            <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-12">
+                <div>
+                    <dt class="text-lg leading-6 font-medium text-dark-purple">
+                        Qu'est-ce qui différencie Locaworkout ?
+                    </dt>
+                    <dd class="mt-2 text-base text-eggplant">
+                        Nous combinons des avis communautaires avec une modération intelligente pour vous fournir des informations fiables sur les salles, clubs et installations sportives genevoises.
+                    </dd>
+                </div>
+
+                <div>
+                    <dt class="text-lg leading-6 font-medium text-dark-purple">
+                        Quand la version beta sera-t-elle lancée ?
+                    </dt>
+                    <dd class="mt-2 text-base text-eggplant">
+                        Nous déployons les invitations pour le MVP à partir du Q3 2025. Les premiers inscrits auront un accès prioritaire.
+                    </dd>
+                </div>
+
+                <div>
+                    <dt class="text-lg leading-6 font-medium text-dark-purple">
+                        Y a-t-il un coût pour rejoindre la beta ?
+                    </dt>
+                    <dd class="mt-2 text-base text-eggplant">
+                        Non, la beta est complètement gratuite. Les testeurs beta recevront même des fonctionnalités premium gratuites pendant un an après le lancement officiel en Q3 2026.
+                    </dd>
+                </div>
+
+                <div>
+                    <dt class="text-lg leading-6 font-medium text-dark-purple">
+                        Quels lieux sportifs sont couverts ?
+                    </dt>
+                    <dd class="mt-2 text-base text-eggplant">
+                        Tous les lieux sportifs à Genève : salles de sport, clubs privés, installations communales, piscines, terrains extérieurs, et bien d'autres. Vous pouvez suggérer des lieux lors de votre inscription.
+                    </dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+</div>
+
+<!-- Final CTA -->
+<div class="gradient-bg from-tickle-me-pink to-raspberry">
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+        <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+            <span class="block">Prêt à transformer votre pratique sportive ?</span>
+            <span class="block text-mimi-pink">Rejoignez notre beta dès aujourd'hui.</span>
+        </h2>
+        <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+            <div class="inline-flex rounded-md shadow">
+                <a href="#beta" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-raspberry bg-white hover:bg-mimi-pink">
+                    Commencer
+                </a>
+            </div>
+            <div class="ml-3 inline-flex rounded-md shadow">
+                <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-amaranth-purple hover:bg-dark-purple">
+                    En savoir plus
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark-purple">
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+            <div class="space-y-8 xl:col-span-1">
+                <div class="flex items-center">
+                    <div class="h-8 w-8 rounded-full bg-raspberry flex items-center justify-center text-white font-bold">LW</div>
+                    <span class="ml-2 text-xl font-bold text-white">Locaworkout Genève</span>
+                </div>
+                <p class="text-mimi-pink text-base">
+                    Aider les sportifs genevois à trouver leur lieu d'entraînement idéal depuis 2025.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-mimi-pink hover:text-white">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-mimi-pink hover:text-white">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-mimi-pink hover:text-white">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+                <div class="md:grid md:grid-cols-2 md:gap-8">
+                    <div>
+                        <h3 class="text-sm font-semibold text-mimi-pink tracking-wider uppercase">
+                            Produit
+                        </h3>
+                        <ul class="mt-4 space-y-4">
+                            <li>
+                                <a href="#features" class="text-base text-mimi-pink hover:text-white">
+                                    Fonctionnalités
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-base text-mimi-pink hover:text-white">
+                                    Tarifs
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#beta" class="text-base text-mimi-pink hover:text-white">
+                                    Beta
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-12 md:mt-0">
+                        <h3 class="text-sm font-semibold text-mimi-pink tracking-wider uppercase">
+                            Société
+                        </h3>
+                        <ul class="mt-4 space-y-4">
+                            <li>
+                                <a href="#" class="text-base text-mimi-pink hover:text-white">
+                                    À propos
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-base text-mimi-pink hover:text-white">
+                                    Blog
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-base text-mimi-pink hover:text-white">
+                                    Emplois
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:grid md:grid-cols-2 md:gap-8">
+                    <div>
+                        <h3 class="text-sm font-semibold text-mimi-pink tracking-wider uppercase">
+                            Légal
+                        </h3>
+                        <ul class="mt-4 space-y-4">
+                            <li>
+                                <a href="#" class="text-base text-mimi-pink hover:text-white">
+                                    Confidentialité
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-base text-mimi-pink hover:text-white">
+                                    Conditions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-12 md:mt-0">
+                        <h3 class="text-sm font-semibold text-mimi-pink tracking-wider uppercase">
+                            Support
+                        </h3>
+                        <ul class="mt-4 space-y-4">
+                            <li>
+                                <a href="#" class="text-base text-mimi-pink hover:text-white">
+                                    Contact
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-base text-mimi-pink hover:text-white">
+                                    Centre d'aide
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 border-t border-amaranth-purple pt-8">
+            <p class="text-base text-mimi-pink text-center">
+                &copy; 2025 Locaworkout Genève. Tous droits réservés.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function toggleMobileMenu() {
+        const menu = document.querySelector('.mobile-menu');
+        menu.classList.toggle('open');
+    }
+</script>
 </body>
 </html>

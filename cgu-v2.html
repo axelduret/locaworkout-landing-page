@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Conditions générales d'utilisation de Locaworkout - Plateforme de découverte des lieux sportifs à Genève">
+    <title>Conditions Générales | Locaworkout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        white: '#ffffff',
+                        'white-hover': '#f3f4f6',
+                        green: '#00b894',
+                        blue: '#0078ff',
+                        'mimi-pink': '#f9d8e3',
+                        'tickle-me-pink': '#ed8bab',
+                        blush: '#e6648e',
+                        raspberry: '#da1756',
+                        'amaranth-purple': '#b61348',
+                        eggplant: '#594249',
+                        'dark-purple': '#24040e',
+                        black: '#000000'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--tw-gradient-from) 0%, var(--tw-gradient-to) 100%);
+        }
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .mobile-menu.open {
+            max-height: 500px;
+            transition: max-height 0.5s ease-in;
+        }
+        .terms-section {
+            scroll-margin-top: 100px;
+        }
+        .terms-nav a.active {
+            color: #da1756;
+            font-weight: 600;
+            border-left: 3px solid #da1756;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="index.html" class="flex items-center">
+                            <div class="h-8 w-8 rounded-full bg-raspberry flex items-center justify-center text-white font-bold">
+                                <i class="fas fa-location-dot text-md"></i>
+                            </div>
+                            <span class="ml-2 text-xl font-bold text-dark-purple">Locaworkout</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center">
+                    <a href="index.html#features" class="px-4 py-2 text-sm font-medium rounded-md text-raspberry hover:bg-mimi-pink">Fonctionnalités</a>
+                    <a href="index.html#how-it-works" class="px-4 py-2 text-sm font-medium rounded-md text-raspberry hover:bg-mimi-pink">Comment ça marche</a>
+                    <a href="index.html#beta" class="px-4 py-2 text-sm font-medium rounded-md text-raspberry hover:bg-mimi-pink">Accès Beta</a>
+                </div>
+                <div class="hidden md:flex items-center">
+                    <a href="index.html#beta" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-raspberry hover:bg-amaranth-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-raspberry">
+                        Rejoindre la liste d'attente
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-raspberry hover:text-amaranth-purple hover:bg-mimi-pink focus:outline-none">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu bg-white md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#features" class="block px-3 py-2 rounded-md text-base font-medium text-raspberry hover:bg-mimi-pink">Fonctionnalités</a>
+                <a href="index.html#how-it-works" class="block px-3 py-2 rounded-md text-base font-medium text-raspberry hover:bg-mimi-pink">Comment ça marche</a>
+                <a href="index.html#beta" class="block px-3 py-2 rounded-md text-base font-medium text-raspberry hover:bg-mimi-pink">Accès Beta</a>
+                <a href="index.html#beta" class="w-full mt-2 inline-flex justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-raspberry hover:bg-amaranth-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-raspberry">
+                    Rejoindre la liste d'attente
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="gradient-bg from-tickle-me-pink to-raspberry">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
+                    Conditions Générales d'Utilisation
+                </h1>
+                <p class="mt-4 max-w-3xl mx-auto text-lg text-mimi-pink">
+                    Dernière mise à jour : 15 juin 2025
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="lg:grid lg:grid-cols-4 lg:gap-8">
+            <!-- Navigation sidebar -->
+            <div class="hidden lg:block lg:col-span-1">
+                <div class="sticky top-24">
+                    <nav class="space-y-1 terms-nav">
+                        <a href="#article-1" class="block pl-4 py-2 text-sm font-medium text-eggplant hover:text-raspberry border-l-3 border-transparent">Article 1 - Objet</a>
+                        <a href="#article-2" class="block pl-4 py-2 text-sm font-medium text-eggplant hover:text-raspberry border-l-3 border-transparent">Article 2 - Acceptation</a>
+                        <a href="#article-3" class="block pl-4 py-2 text-sm font-medium text-eggplant hover:text-raspberry border-l-3 border-transparent">Article 3 - Inscription</a>
+                        <a href="#article-4" class="block pl-4 py-2 text-sm font-medium text-eggplant hover:text-raspberry border-l-3 border-transparent">Article 4 - Utilisation</a>
+                        <a href="#article-5" class="block pl-4 py-2 text-sm font-medium text-eggplant hover:text-raspberry border-l-3 border-transparent">Article 5 - Modération</a>
+                        <a href="#article-6" class="block pl-4 py-2 text-sm font-medium text-eggplant hover:text-raspberry border-l-3 border-transparent">Article 6 - Propriété</a>
+                        <a href="#article-7" class="block pl-4 py-2 text-sm font-medium text-eggplant hover:text-raspberry border-l-3 border-transparent">Article 7 - Responsabilité</a>
+                        <a href="#article-8" class="block pl-4 py-2 text-sm font-medium text-eggplant hover:text-raspberry border-l-3 border-transparent">Article 8 - Modifications</a>
+                        <a href="#article-9" class="block pl-4 py-2 text-sm font-medium text-eggplant hover:text-raspberry border-l-3 border-transparent">Article 9 - Droit applicable</a>
+                        <a href="#article-10" class="block pl-4 py-2 text-sm font-medium text-eggplant hover:text-raspberry border-l-3 border-transparent">Article 10 - Contact</a>
+                        <a href="#moderation" class="block pl-4 py-2 text-sm font-medium text-eggplant hover:text-raspberry border-l-3 border-transparent">Modération</a>
+                    </nav>
+                    <div class="mt-8 p-4 bg-mimi-pink rounded-lg">
+                        <h3 class="text-sm font-semibold text-dark-purple uppercase">Besoin d'aide ?</h3>
+                        <p class="mt-2 text-sm text-eggplant">
+                            Pour toute question concernant nos CGU, contactez-nous à :
+                            <a href="mailto:legal@locaworkout.com" class="text-raspberry hover:underline">legal@locaworkout.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Terms content -->
+            <div class="lg:col-span-3">
+                <div class="prose prose-lg text-eggplant max-w-none">
+                    <p class="text-lg">
+                        Les présentes conditions générales d'utilisation (ci-après les "CGU") ont pour objet de définir les modalités et conditions dans lesquelles Locaworkout met à disposition sa plateforme ainsi que les services associés, et les conditions dans lesquelles l'utilisateur accède et utilise ces services.
+                    </p>
+
+                    <!-- Article 1 -->
+                    <section id="article-1" class="terms-section mt-12 pt-8">
+                        <h2 class="text-2xl font-bold text-dark-purple">Article 1 : Objet</h2>
+                        <p>
+                            Les présentes Conditions Générales d'Utilisation (CGU) ont pour objet de définir les modalités et conditions d'utilisation de l'application Locaworkout (ci-après dénommée "l'Application") par les utilisateurs (ci-après dénommés "les Utilisateurs").
+                        </p>
+                    </section>
+
+                    <!-- Article 2 -->
+                    <section id="article-2" class="terms-section mt-12 pt-8">
+                        <h2 class="text-2xl font-bold text-dark-purple">Article 2 : Acceptation des CGU</h2>
+                        <p>
+                            L'utilisation de l'Application implique l'acceptation pleine et entière des présentes CGU par l'Utilisateur. En s'inscrivant ou en utilisant l'Application, l'Utilisateur reconnaît avoir lu et compris ces CGU et accepte de s'y conformer.
+                        </p>
+                    </section>
+
+                    <!-- Article 3 -->
+                    <section id="article-3" class="terms-section mt-12 pt-8">
+                        <h2 class="text-2xl font-bold text-dark-purple">Article 3 : Inscription et Profil Utilisateur</h2>
+                        <ul class="mt-4 space-y-4">
+                            <li>
+                                <strong>Inscription</strong> : Pour accéder à certaines fonctionnalités de l'Application, l'Utilisateur doit créer un compte en fournissant des informations exactes et complètes.
+                            </li>
+                            <li>
+                                <strong>Profil</strong> : L'Utilisateur peut personnaliser son profil et doit veiller à la mise à jour régulière de ses informations personnelles.
+                            </li>
+                            <li>
+                                <strong>Confidentialité</strong> : Les informations personnelles de l'Utilisateur sont protégées conformément à notre politique de confidentialité.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- Article 4 -->
+                    <section id="article-4" class="terms-section mt-12 pt-8">
+                        <h2 class="text-2xl font-bold text-dark-purple">Article 4 : Utilisation de l'Application</h2>
+                        <ul class="mt-4 space-y-4">
+                            <li>
+                                <strong>Localisation</strong> : L'Application utilise la localisation pour afficher les installations sportives à proximité.
+                            </li>
+                            <li>
+                                <strong>Commentaires et Avis</strong> : Les Utilisateurs peuvent laisser des avis et des commentaires sur les installations sportives. Ces avis doivent être honnêtes et respectueux.
+                            </li>
+                            <li>
+                                <strong>Interdictions</strong> : Il est interdit d'utiliser l'Application pour :
+                                <ul class="mt-2 ml-6 list-disc space-y-2">
+                                    <li>Publier des contenus diffamatoires, injurieux, ou illicites.</li>
+                                    <li>Harceler ou menacer d'autres Utilisateurs.</li>
+                                    <li>Publier des informations personnelles d'autrui sans leur consentement.</li>
+                                    <li>Diffuser des contenus commerciaux non autorisés.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- Article 5 -->
+                    <section id="article-5" class="terms-section mt-12 pt-8">
+                        <h2 class="text-2xl font-bold text-dark-purple">Article 5 : Modération</h2>
+                        <ul class="mt-4 space-y-4">
+                            <li>
+                                <strong>Responsabilité de la Modération</strong> : L'équipe de modération de l'Application a pour mission de veiller au respect des présentes CGU et à la qualité des contenus publiés.
+                            </li>
+                            <li>
+                                <strong>Signalement</strong> : Les Utilisateurs peuvent signaler tout contenu inapproprié ou non conforme aux CGU via les outils de signalement mis à disposition dans l'Application.
+                            </li>
+                            <li>
+                                <strong>Sanctions</strong> : En cas de non-respect des CGU, l'équipe de modération se réserve le droit de :
+                                <ul class="mt-2 ml-6 list-disc space-y-2">
+                                    <li>Supprimer ou modifier les contenus non conformes.</li>
+                                    <li>Suspendre ou supprimer le compte de l'Utilisateur fautif.</li>
+                                    <li>Informer les autorités compétentes en cas de contenu illicite.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- Article 6 -->
+                    <section id="article-6" class="terms-section mt-12 pt-8">
+                        <h2 class="text-2xl font-bold text-dark-purple">Article 6 : Propriété Intellectuelle</h2>
+                        <p>
+                            Tous les contenus de l'Application (textes, images, logos, etc.) sont protégés par le droit d'auteur. Toute reproduction, modification ou diffusion sans autorisation est strictement interdite.
+                        </p>
+                    </section>
+
+                    <!-- Article 7 -->
+                    <section id="article-7" class="terms-section mt-12 pt-8">
+                        <h2 class="text-2xl font-bold text-dark-purple">Article 7 : Responsabilité</h2>
+                        <p>
+                            L'Application met tout en œuvre pour fournir des informations fiables, mais ne peut garantir l'exactitude et l'exhaustivité des informations disponibles. L'Utilisateur utilise l'Application à ses propres risques.
+                        </p>
+                    </section>
+
+                    <!-- Article 8 -->
+                    <section id="article-8" class="terms-section mt-12 pt-8">
+                        <h2 class="text-2xl font-bold text-dark-purple">Article 8 : Modification des CGU</h2>
+                        <p>
+                            L'éditeur de l'Application se réserve le droit de modifier les présentes CGU à tout moment. Les modifications seront notifiées aux Utilisateurs par tout moyen approprié.
+                        </p>
+                    </section>
+
+                    <!-- Article 9 -->
+                    <section id="article-9" class="terms-section mt-12 pt-8">
+                        <h2 class="text-2xl font-bold text-dark-purple">Article 9 : Droit Applicable et Juridiction</h2>
+                        <p>
+                            Les présentes CGU sont régies par le droit suisse. Tout litige relatif à leur interprétation ou leur exécution relève des tribunaux compétents de Genève.
+                        </p>
+                    </section>
+
+                    <!-- Article 10 -->
+                    <section id="article-10" class="terms-section mt-12 pt-8">
+                        <h2 class="text-2xl font-bold text-dark-purple">Article 10 : Contact</h2>
+                        <p>
+                            Pour toute question relative aux CGU ou à l'utilisation de l'Application, l'Utilisateur peut contacter l'assistance via <a href="mailto:support@locaworkout.com" class="text-raspberry hover:underline">support@locaworkout.com</a>.
+                        </p>
+                    </section>
+
+                    <!-- Moderation Section -->
+                    <section id="moderation" class="terms-section mt-12 pt-8">
+                        <h2 class="text-2xl font-bold text-dark-purple">Modération de la Plate-forme</h2>
+                        
+                        <h3 class="text-xl font-semibold text-dark-purple mt-6">Objectif de la Modération</h3>
+                        <p>
+                            La modération vise à garantir un environnement respectueux et sécurisé pour tous les Utilisateurs de l'Application. Elle s'assure que les avis, commentaires et autres contenus respectent les règles établies dans les CGU.
+                        </p>
+                        
+                        <h3 class="text-xl font-semibold text-dark-purple mt-6">Rôle de l'Équipe de Modération</h3>
+                        <ul class="mt-4 space-y-2">
+                            <li><strong>Vérification des Contenus</strong> : Analyser les avis et commentaires pour vérifier leur conformité avec les CGU.</li>
+                            <li><strong>Réponse aux Signalements</strong> : Traiter les signalements d'abus ou de contenus inappropriés dans les meilleurs délais.</li>
+                            <li><strong>Actions Correctives</strong> : Supprimer ou modifier les contenus non conformes, suspendre ou bannir les Utilisateurs fautifs.</li>
+                        </ul>
+                        
+                        <h3 class="text-xl font-semibold text-dark-purple mt-6">Processus de Modération</h3>
+                        <ol class="mt-4 space-y-2 list-decimal ml-6">
+                            <li><strong>Publication</strong> : Les avis et commentaires sont publiés instantanément mais peuvent être soumis à une vérification post-publication.</li>
+                            <li><strong>Signalement</strong> : Les Utilisateurs peuvent signaler tout contenu qu'ils jugent inapproprié ou contraire aux CGU.</li>
+                            <li><strong>Examen</strong> : Les signalements sont examinés par l'équipe de modération.</li>
+                            <li><strong>Action</strong> : En fonction de la gravité, des actions correctives appropriées sont prises (modification, suppression, suspension de compte, etc.).</li>
+                        </ol>
+                        
+                        <h3 class="text-xl font-semibold text-dark-purple mt-6">Critères de Modération</h3>
+                        <ul class="mt-4 space-y-2">
+                            <li><strong>Respect des Autres</strong> : Aucun contenu diffamatoire, injurieux ou harcelant n'est toléré.</li>
+                            <li><strong>Authenticité des Avis</strong> : Les avis doivent être basés sur des expériences réelles et personnelles.</li>
+                            <li><strong>Interdiction de Contenus Illicites</strong> : Aucun contenu illégal ne doit être publié.</li>
+                            <li><strong>Neutralité Commerciale</strong> : Aucun contenu promotionnel non autorisé n'est permis.</li>
+                        </ul>
+                        
+                        <p class="mt-6">
+                            En acceptant ces CGU et en utilisant l'Application, les Utilisateurs s'engagent à respecter les règles de la communauté et à contribuer à un environnement positif et respectueux pour tous.
+                        </p>
+                    </section>
+
+                    <div class="mt-16 p-6 bg-mimi-pink rounded-lg">
+                        <h3 class="text-xl font-bold text-dark-purple">Acceptation des CGU</h3>
+                        <p class="mt-2">
+                            En utilisant la Plateforme Locaworkout, vous reconnaissez avoir pris connaissance des présentes Conditions Générales d'Utilisation et vous vous engagez à les respecter.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark-purple">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="space-y-8 xl:col-span-1">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 flex items-center">
+                            <div class="h-8 w-8 rounded-full bg-raspberry flex items-center justify-center text-white font-bold">
+                                <i class="fas fa-location-dot text-md"></i>
+                            </div>
+                            <span class="ml-2 text-xl font-bold text-white">Locaworkout</span>
+                        </div>
+                    </div>
+                    <p class="text-mimi-pink text-base">
+                        Aide les athlètes genevois·es à trouver leur lieu d'entraînement idéal depuis 2025.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-mimi-pink hover:text-white">
+                            <i class="fab fa-x"></i>
+                        </a>
+                        <a href="#" class="text-mimi-pink hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-mimi-pink hover:text-white">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-mimi-pink tracking-wider uppercase">
+                                Produit
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <li>
+                                    <a href="index.html#features" class="text-base text-mimi-pink hover:text-white">
+                                        Fonctionnalités
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index.html#beta" class="text-base text-mimi-pink hover:text-white">
+                                        Beta
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-mimi-pink tracking-wider uppercase">
+                                Société
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <li>
+                                    <a href="#" class="text-base text-mimi-pink hover:text-white">
+                                        À propos
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-mimi-pink tracking-wider uppercase">
+                                Légal
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <li>
+                                    <a href="conditions-generales.html" class="text-base text-mimi-pink hover:text-white">
+                                        Conditions générales
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-mimi-pink hover:text-white">
+                                        Confidentialité
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-mimi-pink tracking-wider uppercase">
+                                Support
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <li>
+                                    <a href="#" class="text-base text-mimi-pink hover:text-white">
+                                        Contact
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-mimi-pink hover:text-white">
+                                        Centre d'aide
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-amaranth-purple pt-8">
+                <p class="text-base text-mimi-pink text-center">
+                    &copy; 2025 Locaworkout. Tous droits réservés.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.querySelector('.mobile-menu');
+            menu.classList.toggle('open');
+        }
+
+        // Highlight active section in sidebar navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.terms-section');
+            const navLinks = document.querySelectorAll('.terms-nav a');
+
+            function onScroll() {
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (pageYOffset >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', onScroll);
+        });
+    </script>
+</body>
+</html>

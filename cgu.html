@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Conditions générales d'utilisation de Locaworkout - Plateforme de découverte des lieux sportifs à Genève">
+    <title>Conditions Générales | Locaworkout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        white: '#ffffff',
+                        'white-hover': '#f3f4f6',
+                        green: '#00b894',
+                        blue: '#0078ff',
+                        'mimi-pink': '#f9d8e3',
+                        'tickle-me-pink': '#ed8bab',
+                        blush: '#e6648e',
+                        raspberry: '#da1756',
+                        'amaranth-purple': '#b61348',
+                        eggplant: '#594249',
+                        'dark-purple': '#24040e',
+                        black: '#000000'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--tw-gradient-from) 0%, var(--tw-gradient-to) 100%);
+        }
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .mobile-menu.open {
+            max-height: 500px;
+            transition: max-height 0.5s ease-in;
+        }
+        .terms-section {
+            scroll-margin-top: 100px;
+        }
+        .terms-nav a.active {
+            color: #da1756;
+            font-weight: 600;
+            border-left: 3px solid #da1756;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="index.html" class="flex items-center">
+                            <div class="h-8 w-8 rounded-full bg-raspberry flex items-center justify-center text-white font-bold">
+                                <i class="fas fa-location-dot text-md"></i>
+                            </div>
+                            <span class="ml-2 text-xl font-bold text-dark-purple">Locaworkout</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center">
+                    <a href="index.html#features" class="px-4 py-2 text-sm font-medium rounded-md text-raspberry hover:bg-mimi-pink">Fonctionnalités</a>
+                    <a href="index.html#how-it-works" class="px-4 py-2 text-sm font-medium rounded-md text-raspberry hover:bg-mimi-pink">Comment ça marche</a>
+                    <a href="index.html#beta" class="px-4 py-2 text-sm font-medium rounded-md text-raspberry hover:bg-mimi-pink">Accès Beta</a>
+                </div>
+                <div class="hidden md:flex items-center">
+                    <a href="index.html#beta" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-raspberry hover:bg-amaranth-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-raspberry">
+                        Rejoindre la liste d'attente
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-raspberry hover:text-amaranth-purple hover:bg-mimi-pink focus:outline-none">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu bg-white md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#features" class="block px-3 py-2 rounded-md text-base font-medium text-raspberry hover:bg-mimi-pink">Fonctionnalités</a>
+                <a href="index.html#how-it-works" class="block px-3 py-2 rounded-md text-base font-medium text-raspberry hover:bg-mimi-pink">Comment ça marche</a>
+                <a href="index.html#beta" class="block px-3 py-2 rounded-md text-base font-medium text-raspberry hover:bg-mimi-pink">Accès Beta</a>
+                <a href="index.html#beta" class="w-full mt-2 inline-flex justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-raspberry hover:bg-amaranth-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-raspberry">
+                    Rejoindre la liste d'attente
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="gradient-bg from-tickle-me-pink to-raspberry">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
+                    Conditions Générales d'Utilisation
+                </h1>
+                <p class="mt-4 max-w-3xl mx-auto text-lg text-mimi-pink">
+                    Dernière mise à jour : 15 juin 2025
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="lg:grid lg:grid-cols-4 lg:gap-8">
+            <!-- Navigation sidebar -->
+            <div class="hidden lg:block lg:col-span-1">
+                <div class="sticky top-24">
+                    <nav class="space-y-1 terms-nav">
+                        <a href="#article-1" class="block pl-4 py-2 text-sm font-medium text-eggplant hover:text-raspberry border-l-3 border-transparent">Article 1 - Objet</a>
+                        <a href="#article-2" class="block pl-4 py-2 text-sm font-medium text-eggplant hover:text-raspberry border-l-3 border-transparent">Article 2 - Définitions</a>
+                        <a href="#article-3" class="block pl-4 py-2 text-sm font-medium text-eggplant hover:text-raspberry border-l-3 border-transparent">Article 3 - Acceptation</a>
+                        <a href="#article-4" class="block pl-4 py-2 text-sm font-medium text-eggplant hover:text-raspberry border-l-3 border-transparent">Article 4 - Accès</a>
+                        <a href="#article-5" class="block pl-4 py-2 text-sm font-medium text-eggplant hover:text-raspberry border-l-3 border-transparent">Article 5 - Compte</a>
+                        <a href="#article-6" class="block pl-4 py-2 text-sm font-medium text-eggplant hover:text-raspberry border-l-3 border-transparent">Article 6 - Contenu</a>
+                        <a href="#article-7" class="block pl-4 py-2 text-sm font-medium text-eggplant hover:text-raspberry border-l-3 border-transparent">Article 7 - Propriété</a>
+                        <a href="#article-8" class="block pl-4 py-2 text-sm font-medium text-eggplant hover:text-raspberry border-l-3 border-transparent">Article 8 - Responsabilité</a>
+                        <a href="#article-9" class="block pl-4 py-2 text-sm font-medium text-eggplant hover:text-raspberry border-l-3 border-transparent">Article 9 - Données</a>
+                        <a href="#article-10" class="block pl-4 py-2 text-sm font-medium text-eggplant hover:text-raspberry border-l-3 border-transparent">Article 10 - Modifications</a>
+                        <a href="#article-11" class="block pl-4 py-2 text-sm font-medium text-eggplant hover:text-raspberry border-l-3 border-transparent">Article 11 - Loi applicable</a>
+                    </nav>
+                    <div class="mt-8 p-4 bg-mimi-pink rounded-lg">
+                        <h3 class="text-sm font-semibold text-dark-purple uppercase">Besoin d'aide ?</h3>
+                        <p class="mt-2 text-sm text-eggplant">
+                            Pour toute question concernant nos CGU, contactez-nous à :
+                            <a href="mailto:legal@locaworkout.com" class="text-raspberry hover:underline">legal@locaworkout.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Terms content -->
+            <div class="lg:col-span-3">
+                <div class="prose prose-lg text-eggplant max-w-none">
+                    <p class="text-lg">
+                        Les présentes conditions générales d'utilisation (ci-après les "CGU") ont pour objet de définir les modalités et conditions dans lesquelles Locaworkout met à disposition sa plateforme ainsi que les services associés, et les conditions dans lesquelles l'utilisateur accède et utilise ces services.
+                    </p>
+
+                    <!-- Article 1 -->
+                    <section id="article-1" class="terms-section mt-12 pt-8">
+                        <h2 class="text-2xl font-bold text-dark-purple">Article 1 - Objet</h2>
+                        <p>
+                            Locaworkout est une plateforme numérique permettant aux utilisateurs de découvrir, évaluer et partager des informations concernant les lieux sportifs à Genève (ci-après la "Plateforme").
+                        </p>
+                        <p class="mt-4">
+                            Les présentes CGU ont pour objet de définir les conditions d'accès et d'utilisation des services proposés par Locaworkout (ci-après les "Services").
+                        </p>
+                    </section>
+
+                    <!-- Article 2 -->
+                    <section id="article-2" class="terms-section mt-12 pt-8">
+                        <h2 class="text-2xl font-bold text-dark-purple">Article 2 - Définitions</h2>
+                        <p>
+                            Dans les présentes CGU, les termes suivants ont la signification indiquée ci-dessous :
+                        </p>
+                        <ul class="mt-4 space-y-2">
+                            <li><strong>"Utilisateur"</strong> : toute personne physique majeure accédant ou utilisant la Plateforme ;</li>
+                            <li><strong>"Compte"</strong> : l'espace personnel de l'Utilisateur sur la Plateforme ;</li>
+                            <li><strong>"Contenu"</strong> : toute information, donnée, texte, photo, vidéo ou autre matériel publié sur la Plateforme ;</li>
+                            <li><strong>"Lieu sportif"</strong> : toute installation, salle, club ou espace dédié à la pratique sportive référencé sur la Plateforme.</li>
+                        </ul>
+                    </section>
+
+                    <!-- Article 3 -->
+                    <section id="article-3" class="terms-section mt-12 pt-8">
+                        <h2 class="text-2xl font-bold text-dark-purple">Article 3 - Acceptation des CGU</h2>
+                        <p>
+                            L'accès et l'utilisation de la Plateforme impliquent l'acceptation sans réserve des présentes CGU par l'Utilisateur.
+                        </p>
+                        <p class="mt-4">
+                            En créant un Compte, l'Utilisateur reconnaît avoir pris connaissance des CGU et les accepte expressément.
+                        </p>
+                        <p class="mt-4">
+                            Locaworkout se réserve le droit de modifier à tout moment les présentes CGU. Les modifications prendront effet dès leur mise en ligne.
+                        </p>
+                    </section>
+
+                    <!-- Article 4 -->
+                    <section id="article-4" class="terms-section mt-12 pt-8">
+                        <h2 class="text-2xl font-bold text-dark-purple">Article 4 - Accès à la Plateforme</h2>
+                        <p>
+                            La Plateforme est accessible gratuitement à tout Utilisateur disposant d'un accès à Internet. Tous les coûts afférents à l'accès à la Plateforme, que ce soient les frais matériels, logiciels ou d'accès à Internet sont exclusivement à la charge de l'Utilisateur.
+                        </p>
+                        <p class="mt-4">
+                            Locaworkout met en œuvre les moyens raisonnables à sa disposition pour assurer un accès de qualité à la Plateforme, mais n'est tenu à aucune obligation d'y parvenir.
+                        </p>
+                        <p class="mt-4">
+                            Locaworkout ne peut être tenu responsable des dysfonctionnements du réseau ou des serveurs ou de tout autre événement échappant à son contrôle raisonnable, qui empêcherait ou dégraderait l'accès à la Plateforme.
+                        </p>
+                    </section>
+
+                    <!-- Article 5 -->
+                    <section id="article-5" class="terms-section mt-12 pt-8">
+                        <h2 class="text-2xl font-bold text-dark-purple">Article 5 - Création de Compte</h2>
+                        <p>
+                            L'accès à certaines fonctionnalités de la Plateforme nécessite la création d'un Compte. Pour créer un Compte, l'Utilisateur doit :
+                        </p>
+                        <ul class="mt-4 space-y-2">
+                            <li>Être une personne physique majeure ;</li>
+                            <li>Fournir une adresse email valide ;</li>
+                            <li>Choisir un mot de passe sécurisé ;</li>
+                            <li>Accepter les présentes CGU.</li>
+                        </ul>
+                        <p class="mt-4">
+                            L'Utilisateur garantit que les informations fournies lors de la création de son Compte sont exactes, à jour et sincères. Il s'engage à les mettre à jour en cas de modification.
+                        </p>
+                        <p class="mt-4">
+                            L'Utilisateur est seul responsable de la confidentialité de son mot de passe. Toute utilisation de son Compte est présumée être effectuée par l'Utilisateur.
+                        </p>
+                    </section>
+
+                    <!-- Article 6 -->
+                    <section id="article-6" class="terms-section mt-12 pt-8">
+                        <h2 class="text-2xl font-bold text-dark-purple">Article 6 - Contenu des Utilisateurs</h2>
+                        <p>
+                            L'Utilisateur est seul responsable des Contenus qu'il publie sur la Plateforme. Il garantit disposer de tous les droits et autorisations nécessaires concernant les Contenus qu'il publie.
+                        </p>
+                        <p class="mt-4">
+                            L'Utilisateur s'engage à ne pas publier de Contenu :
+                        </p>
+                        <ul class="mt-4 space-y-2">
+                            <li>Contraire à la loi, à l'ordre public ou aux bonnes mœurs ;</li>
+                            <li>Portant atteinte aux droits des tiers ;</li>
+                            <li>Diffamatoire, injurieux, obscène, violent ou à caractère pornographique ;</li>
+                            <li>Contenant des virus ou tout autre programme susceptible d'altérer les systèmes informatiques.</li>
+                        </ul>
+                        <p class="mt-4">
+                            Locaworkout se réserve le droit de supprimer sans préavis tout Contenu qui contreviendrait aux présentes CGU ou à la législation en vigueur.
+                        </p>
+                    </section>
+
+                    <!-- Article 7 -->
+                    <section id="article-7" class="terms-section mt-12 pt-8">
+                        <h2 class="text-2xl font-bold text-dark-purple">Article 7 - Propriété intellectuelle</h2>
+                        <p>
+                            La Plateforme et chacun des éléments qui la composent (textes, images, logos, marques, etc.) sont la propriété exclusive de Locaworkout ou de ses partenaires et sont protégés par les lois en vigueur en matière de propriété intellectuelle.
+                        </p>
+                        <p class="mt-4">
+                            L'Utilisateur s'engage à ne pas reproduire, modifier, adapter, distribuer ou exploiter de quelque manière que ce soit les éléments de la Plateforme, en tout ou partie, sans autorisation préalable et écrite de Locaworkout.
+                        </p>
+                        <p class="mt-4">
+                            En publiant du Contenu sur la Plateforme, l'Utilisateur concède à Locaworkout une licence non exclusive, gratuite, pour le monde entier, pour utiliser, reproduire, adapter, modifier, diffuser et traduire ledit Contenu, aux fins d'exploitation de la Plateforme.
+                        </p>
+                    </section>
+
+                    <!-- Article 8 -->
+                    <section id="article-8" class="terms-section mt-12 pt-8">
+                        <h2 class="text-2xl font-bold text-dark-purple">Article 8 - Responsabilités</h2>
+                        <p>
+                            Locaworkout s'efforce d'assurer au mieux de ses possibilités l'exactitude et la mise à jour des informations diffusées sur la Plateforme, dont elle décline toutefois la responsabilité.
+                        </p>
+                        <p class="mt-4">
+                            Locaworkout ne garantit pas que la Plateforme sera exempte d'anomalies, d'erreurs ou de bugs, ni que celles-ci pourront être corrigées, ni que la Plateforme fonctionnera sans interruption ou panne.
+                        </p>
+                        <p class="mt-4">
+                            Locaworkout décline toute responsabilité concernant les éventuelles modifications apportées aux Lieux sportifs référencés (horaires, tarifs, équipements, etc.) et concernant les éventuelles réservations ou transactions effectuées directement entre l'Utilisateur et un Lieux sportif.
+                        </p>
+                    </section>
+
+                    <!-- Article 9 -->
+                    <section id="article-9" class="terms-section mt-12 pt-8">
+                        <h2 class="text-2xl font-bold text-dark-purple">Article 9 - Données personnelles</h2>
+                        <p>
+                            Les données personnelles collectées sur la Plateforme font l'objet d'un traitement destiné à fournir les Services. Ce traitement est conforme au Règlement Général sur la Protection des Données (RGPD) et à la loi suisse sur la protection des données.
+                        </p>
+                        <p class="mt-4">
+                            L'Utilisateur dispose d'un droit d'accès, de rectification, de suppression, de limitation, de portabilité et d'opposition pour motifs légitimes concernant ses données personnelles. Ces droits peuvent être exercés par email à l'adresse : <a href="mailto:privacy@locaworkout.com" class="text-raspberry hover:underline">privacy@locaworkout.com</a>
+                        </p>
+                        <p class="mt-4">
+                            Pour plus d'informations, l'Utilisateur peut consulter notre <a href="#" class="text-raspberry hover:underline">Politique de Confidentialité</a>.
+                        </p>
+                    </section>
+
+                    <!-- Article 10 -->
+                    <section id="article-10" class="terms-section mt-12 pt-8">
+                        <h2 class="text-2xl font-bold text-dark-purple">Article 10 - Modification des CGU</h2>
+                        <p>
+                            Locaworkout se réserve le droit de modifier à tout moment les présentes CGU afin de les adapter aux évolutions de la Plateforme et/ou de son exploitation.
+                        </p>
+                        <p class="mt-4">
+                            En cas de modification, les nouvelles CGU seront applicables dès leur mise en ligne. L'Utilisateur sera informé de ces modifications par email et/ou par un message visible lors de sa première connexion suivant la modification.
+                        </p>
+                        <p class="mt-4">
+                            Si l'Utilisateur n'accepte pas les CGU modifiées, il doit cesser d'utiliser la Plateforme. Son utilisation continue de la Plateforme vaut acceptation des CGU modifiées.
+                        </p>
+                    </section>
+
+                    <!-- Article 11 -->
+                    <section id="article-11" class="terms-section mt-12 pt-8">
+                        <h2 class="text-2xl font-bold text-dark-purple">Article 11 - Loi applicable et juridiction compétente</h2>
+                        <p>
+                            Les présentes CGU sont régies par le droit suisse.
+                        </p>
+                        <p class="mt-4">
+                            En cas de litige, et après recherche d'une solution amiable, les tribunaux du canton de Genève seront seuls compétents.
+                        </p>
+                    </section>
+
+                    <div class="mt-16 p-6 bg-mimi-pink rounded-lg">
+                        <h3 class="text-xl font-bold text-dark-purple">Acceptation des CGU</h3>
+                        <p class="mt-2">
+                            En utilisant la Plateforme Locaworkout, vous reconnaissez avoir pris connaissance des présentes Conditions Générales d'Utilisation et vous vous engagez à les respecter.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark-purple">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="space-y-8 xl:col-span-1">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 flex items-center">
+                            <div class="h-8 w-8 rounded-full bg-raspberry flex items-center justify-center text-white font-bold">
+                                <i class="fas fa-location-dot text-md"></i>
+                            </div>
+                            <span class="ml-2 text-xl font-bold text-white">Locaworkout</span>
+                        </div>
+                    </div>
+                    <p class="text-mimi-pink text-base">
+                        Aide les athlètes genevois·es à trouver leur lieu d'entraînement idéal depuis 2025.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-mimi-pink hover:text-white">
+                            <i class="fab fa-x"></i>
+                        </a>
+                        <a href="#" class="text-mimi-pink hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-mimi-pink hover:text-white">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-mimi-pink tracking-wider uppercase">
+                                Produit
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <li>
+                                    <a href="index.html#features" class="text-base text-mimi-pink hover:text-white">
+                                        Fonctionnalités
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index.html#beta" class="text-base text-mimi-pink hover:text-white">
+                                        Beta
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-mimi-pink tracking-wider uppercase">
+                                Société
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <li>
+                                    <a href="#" class="text-base text-mimi-pink hover:text-white">
+                                        À propos
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-mimi-pink tracking-wider uppercase">
+                                Légal
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <li>
+                                    <a href="conditions-generales.html" class="text-base text-mimi-pink hover:text-white">
+                                        Conditions générales
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-mimi-pink hover:text-white">
+                                        Confidentialité
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-mimi-pink tracking-wider uppercase">
+                                Support
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <li>
+                                    <a href="#" class="text-base text-mimi-pink hover:text-white">
+                                        Contact
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-mimi-pink hover:text-white">
+                                        Centre d'aide
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-amaranth-purple pt-8">
+                <p class="text-base text-mimi-pink text-center">
+                    &copy; 2025 Locaworkout. Tous droits réservés.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.querySelector('.mobile-menu');
+            menu.classList.toggle('open');
+        }
+
+        // Highlight active section in sidebar navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.terms-section');
+            const navLinks = document.querySelectorAll('.terms-nav a');
+
+            function onScroll() {
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (pageYOffset >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', onScroll);
+        });
+    </script>
+</body>
+</html>

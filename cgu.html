@@ -5,53 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
     <meta name="description" content="Conditions générales d'utilisation de Locaworkout - Plateforme de découverte des lieux sportifs à Genève">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'strict-dynamic' 'nonce-__REPLACE_WITH_SECURE_NONCE__' 'unsafe-inline' https: http:; object-src 'none'; base-uri 'none'; require-trusted-types-for 'script';">
     <title>Conditions Générales | Locaworkout</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        white: '#ffffff',
-                        'white-hover': '#f3f4f6',
-                        green: '#00b894',
-                        blue: '#0078ff',
-                        'mimi-pink': '#f9d8e3',
-                        'tickle-me-pink': '#ed8bab',
-                        blush: '#e6648e',
-                        raspberry: '#da1756',
-                        'amaranth-purple': '#b61348',
-                        eggplant: '#594249',
-                        'dark-purple': '#24040e',
-                        black: '#000000'
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="tailwind.config.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, var(--tw-gradient-from) 0%, var(--tw-gradient-to) 100%);
-        }
-        .mobile-menu {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-        .mobile-menu.open {
-            max-height: 500px;
-            transition: max-height 0.5s ease-in;
-        }
-        .terms-section {
-            scroll-margin-top: 100px;
-        }
-        .terms-nav a.active {
-            color: #da1756;
-            font-weight: 600;
-            border-left: 3px solid #da1756;
-        }
-    </style>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body class="font-sans antialiased text-gray-800">
     <!-- Navigation -->
@@ -428,39 +387,8 @@
         </div>
     </footer>
 
+    <script src="main.js"></script>
     <script>
-        function toggleMobileMenu() {
-            const menu = document.querySelector('.mobile-menu');
-            menu.classList.toggle('open');
-        }
-
-        // Highlight active section in sidebar navigation
-        document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('.terms-section');
-            const navLinks = document.querySelectorAll('.terms-nav a');
-
-            function onScroll() {
-                let current = '';
-                
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    
-                    if (pageYOffset >= (sectionTop - 200)) {
-                        current = section.getAttribute('id');
-                    }
-                });
-
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${current}`) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-
-            window.addEventListener('scroll', onScroll);
-        });
     </script>
 </body>
 </html>

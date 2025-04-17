@@ -9,6 +9,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Locaworkout | Trouvez & Évaluez les Lieux Sportifs à Genève">
     <meta property="og:description" content="Locaworkout est la plateforme idéale pour découvrir, évaluer et partager les lieux sportifs à Genève. Explorez des salles de sport, clubs privés, piscines, terrains extérieurs et plus.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'strict-dynamic' 'nonce-__REPLACE_WITH_SECURE_NONCE__' 'unsafe-inline' https: http:; object-src 'none'; base-uri 'none'; require-trusted-types-for 'script';">
     <!-- TODO -->
     <!-- <meta property="og:image" content="URL_DE_L'IMAGE_DE_VOTRE_SITE"> -->
     <!-- <meta property="og:url" content="URL_DE_VOTRE_SITE"> -->
@@ -21,74 +22,9 @@
     <!-- TODO -->
     <!-- <link rel="icon" href="URL_DU_FAVICON" type="image/x-icon"> -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        white: '#ffffff',
-                        'white-hover': '#f3f4f6',
-                        green: '#00b894',
-                        blue: '#0078ff',
-                        'mimi-pink': '#f9d8e3',
-                        'tickle-me-pink': '#ed8bab',
-                        blush: '#e6648e',
-                        raspberry: '#da1756',
-                        'amaranth-purple': '#b61348',
-                        eggplant: '#594249',
-                        'dark-purple': '#24040e',
-                        black: '#000000'
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="tailwind.config.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, var(--tw-gradient-from) 0%, var(--tw-gradient-to) 100%);
-        }
-        .map-placeholder {
-            background: white;
-        }
-        .review-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        .pulse {
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        .hero-image {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-        .map-image {
-            background-image: linear-gradient(rgba(249, 216, 227, 0.9), rgba(249, 216, 227, 0.9)), url('https://images.unsplash.com/photo-1651340048718-6185c00f1833?q=80&w=4770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-        .beta-image {
-            background-image: linear-gradient(rgba(249, 216, 227, 0.9), rgba(249, 216, 227, 0.9)), url('https://images.unsplash.com/photo-1664106588879-5480437fb30f?q=80&w=4160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-        /* Mobile menu animation */
-        .mobile-menu {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-        .mobile-menu.open {
-            max-height: 500px;
-            transition: max-height 0.5s ease-in;
-        }
-    </style>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body class="font-sans antialiased text-gray-800">
     <!-- Navigation -->
@@ -630,11 +566,6 @@
     </div>
 </footer>
 
-<script>
-    function toggleMobileMenu() {
-        const menu = document.querySelector('.mobile-menu');
-        menu.classList.toggle('open');
-    }
-</script>
+<script src="main.js"></script>
 </body>
 </html>

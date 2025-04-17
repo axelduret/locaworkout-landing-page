@@ -1,0 +1,255 @@
+<!-- Page Centre d'aide dédiée -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Centre d'aide et FAQ Locaworkout - Toutes les réponses à vos questions sur la plateforme sportive de Genève.">
+    <meta name="keywords" content="aide, FAQ, support, questions, Locaworkout, Genève, sport, communauté">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Centre d'aide | Locaworkout">
+    <meta property="og:description" content="Trouvez toutes les réponses à vos questions sur Locaworkout, la plateforme de découverte sportive à Genève.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'strict-dynamic' 'nonce-__REPLACE_WITH_SECURE_NONCE__' 'unsafe-inline' https: http:; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com; img-src 'self' data: blob: https://images.unsplash.com https:; font-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com data:; object-src 'none'; base-uri 'none'; require-trusted-types-for 'script';">
+    <title>Centre d'aide | Locaworkout</title>
+    <script src="https://cdn.tailwindcss.com" nonce="__REPLACE_WITH_SECURE_NONCE__"></script>
+    <script src="tailwind.config.js" nonce="__REPLACE_WITH_SECURE_NONCE__"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="h-8 w-8 rounded-full bg-raspberry flex items-center justify-center text-white font-bold">
+                            <i class="fas fa-location-dot text-md"></i>
+                        </div>
+                        <span class="ml-2 text-xl font-bold text-dark-purple">Locaworkout</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center">
+                    <a href="#features" class="px-4 py-2 text-sm font-medium rounded-md text-raspberry hover:bg-mimi-pink">Fonctionnalités</a>
+                    <a href="#how-it-works" class="px-4 py-2 text-sm font-medium rounded-md text-raspberry hover:bg-mimi-pink">Comment ça marche</a>
+                    <a href="#beta" class="px-4 py-2 text-sm font-medium rounded-md text-raspberry hover:bg-mimi-pink">Accès Beta</a>
+                </div>
+                <div class="hidden md:flex items-center">
+                    <button class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-raspberry hover:bg-amaranth-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-raspberry pulse">
+                        Rejoindre la liste d'attente
+                    </button>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-raspberry hover:text-amaranth-purple hover:bg-mimi-pink focus:outline-none">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu bg-white md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#features" class="block px-3 py-2 rounded-md text-base font-medium text-raspberry hover:bg-mimi-pink">Fonctionnalités</a>
+                <a href="#how-it-works" class="block px-3 py-2 rounded-md text-base font-medium text-raspberry hover:bg-mimi-pink">Comment ça marche</a>
+                <a href="#beta" class="block px-3 py-2 rounded-md text-base font-medium text-raspberry hover:bg-mimi-pink">Accès Beta</a>
+                <button class="w-full mt-2 inline-flex justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-raspberry hover:bg-amaranth-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-raspberry">
+                    Rejoindre la liste d'attente
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section Centre d'aide -->
+    <div class="gradient-bg from-tickle-me-pink to-raspberry">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
+                    Centre d'aide & FAQ
+                </h1>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-mimi-pink">
+                    Besoin d'aide ? Retrouvez ici les réponses aux questions les plus fréquentes sur Locaworkout. Notre équipe reste à votre écoute !
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section FAQ -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <h2 class="text-2xl font-bold text-dark-purple mb-8 text-center">Questions fréquentes</h2>
+            <div class="space-y-4">
+                <details class="border rounded-lg" name="faq">
+                    <summary class="cursor-pointer px-4 py-4 text-lg font-medium text-raspberry">Qu'est-ce que Locaworkout ?</summary>
+                    <div class="px-4 pb-4 text-base text-eggplant">
+                        Locaworkout est une plateforme communautaire pour découvrir, évaluer et partager les lieux sportifs à Genève (salles, clubs, piscines, terrains, etc.).<br>
+                        <a href="index.html#features" class="text-raspberry hover:underline font-medium">Découvrir les fonctionnalités</a>
+                    </div>
+                </details>
+                <details class="border rounded-lg" name="faq">
+                    <summary class="cursor-pointer px-4 py-4 text-lg font-medium text-raspberry">Comment rejoindre la beta ?</summary>
+                    <div class="px-4 pb-4 text-base text-eggplant">
+                        Inscrivez-vous via le <a href="index.html#beta" class="text-raspberry hover:underline font-medium">formulaire Beta</a> sur la page d'accueil. Vous recevrez une invitation par email dès l'ouverture.
+                    </div>
+                </details>
+                <details class="border rounded-lg" name="faq">
+                    <summary class="cursor-pointer px-4 py-4 text-lg font-medium text-raspberry">Mes données sont-elles protégées ?</summary>
+                    <div class="px-4 pb-4 text-base text-eggplant">
+                        Oui, nous respectons la confidentialité de vos données. Consultez nos <a href="cgu.html" class="text-raspberry hover:underline font-medium">Conditions Générales</a> pour plus de détails.
+                    </div>
+                </details>
+                <details class="border rounded-lg" name="faq">
+                    <summary class="cursor-pointer px-4 py-4 text-lg font-medium text-raspberry">Comment la sécurité et la modération sont-elles assurées ?</summary>
+                    <div class="px-4 pb-4 text-base text-eggplant">
+                        Tous les avis et contenus sont modérés pour garantir un environnement respectueux et sécurisé. Les utilisateurs peuvent signaler tout abus. Pour en savoir plus, consultez la section "Modération" de nos <a href="cgu.html" class="text-raspberry hover:underline font-medium">CGU</a>.
+                    </div>
+                </details>
+                <details class="border rounded-lg" name="faq">
+                    <summary class="cursor-pointer px-4 py-4 text-lg font-medium text-raspberry">Quels lieux sont référencés ?</summary>
+                    <div class="px-4 pb-4 text-base text-eggplant">
+                        Tous types de lieux sportifs à Genève : salles, clubs privés, installations communales, piscines, stades, etc. Vous pouvez aussi suggérer un lieu lors de votre inscription.
+                    </div>
+                </details>
+                <details class="border rounded-lg" name="faq">
+                    <summary class="cursor-pointer px-4 py-4 text-lg font-medium text-raspberry">Comment fonctionnent les avis ?</summary>
+                    <div class="px-4 pb-4 text-base text-eggplant">
+                        Les avis sont rédigés par la communauté et modérés pour garantir leur fiabilité et leur pertinence.
+                    </div>
+                </details>
+                <details class="border rounded-lg" name="faq">
+                    <summary class="cursor-pointer px-4 py-4 text-lg font-medium text-raspberry">Quand la plateforme sera-t-elle disponible ?</summary>
+                    <div class="px-4 pb-4 text-base text-eggplant">
+                        La beta ouvre progressivement à partir de septembre 2025. Les inscrits recevront un accès prioritaire.
+                    </div>
+                </details>
+                <details class="border rounded-lg" name="faq">
+                    <summary class="cursor-pointer px-4 py-4 text-lg font-medium text-raspberry">La plateforme est-elle payante ?</summary>
+                    <div class="px-4 pb-4 text-base text-eggplant">
+                        L'accès à la beta est gratuit. Après le lancement, certaines fonctionnalités premium resteront offertes aux premiers testeurs.
+                    </div>
+                </details>
+            </div>
+            <div class="mt-10 text-center">
+                <p class="text-eggplant">Vous n'avez pas trouvé votre réponse ? <a href="contact.html" class="text-raspberry hover:underline font-medium">Contactez-nous</a>, nous sommes là pour vous aider !</p>
+            </div>
+            <div class="mt-6 text-center text-sm text-eggplant">
+                <span>Voir aussi : </span>
+                <a href="cgu.html" class="text-raspberry hover:underline font-medium">Conditions Générales</a> ·
+                <a href="index.html#features" class="text-raspberry hover:underline font-medium">Fonctionnalités</a> ·
+                <a href="index.html#beta" class="text-raspberry hover:underline font-medium">Inscription Beta</a>
+            </div>
+        </div>
+    </div>
+
+<!-- Footer -->
+<footer class="bg-dark-purple">
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+            <div class="space-y-8 xl:col-span-1">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="h-8 w-8 rounded-full bg-raspberry flex items-center justify-center text-white font-bold">
+                            <i class="fas fa-location-dot text-md"></i>
+                        </div>
+                        <span class="ml-2 text-xl font-bold text-white">Locaworkout</span>
+                    </div>
+                </div>
+                <p class="text-mimi-pink text-base">
+                    Aide les athlètes genevois·es à trouver leur lieu d'entraînement idéal depuis 2025.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-mimi-pink hover:text-white">
+                        <i class="fab fa-x"></i>
+                    </a>
+                    <a href="#" class="text-mimi-pink hover:text-white">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-mimi-pink hover:text-white">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+                <div class="md:grid md:grid-cols-2 md:gap-8">
+                    <div>
+                        <h3 class="text-sm font-semibold text-mimi-pink tracking-wider uppercase">
+                            Produit
+                        </h3>
+                        <ul class="mt-4 space-y-4">
+                            <li>
+                                <a href="#features" class="text-base text-mimi-pink hover:text-white">
+                                    Fonctionnalités
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#beta" class="text-base text-mimi-pink hover:text-white">
+                                    Beta
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-12 md:mt-0">
+                        <h3 class="text-sm font-semibold text-mimi-pink tracking-wider uppercase">
+                            Société
+                        </h3>
+                        <ul class="mt-4 space-y-4">
+                            <li>
+                                <a href="#" class="text-base text-mimi-pink hover:text-white">
+                                    À propos
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:grid md:grid-cols-2 md:gap-8">
+                    <div>
+                        <h3 class="text-sm font-semibold text-mimi-pink tracking-wider uppercase">
+                            Légal
+                        </h3>
+                        <ul class="mt-4 space-y-4">
+                            <li>
+                                <a href="#" class="text-base text-mimi-pink hover:text-white">
+                                    Confidentialité
+                                </a>
+                            </li>
+                            <li>
+                                <a href="cgu.html" class="text-base text-mimi-pink hover:text-white">
+                                    Conditions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-12 md:mt-0">
+                        <h3 class="text-sm font-semibold text-mimi-pink tracking-wider uppercase">
+                            Support
+                        </h3>
+                        <ul class="mt-4 space-y-4">
+                            <li>
+                                <a href="#" class="text-base text-mimi-pink hover:text-white">
+                                    Contact
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-base text-mimi-pink hover:text-white">
+                                    Centre d'aide
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 border-t border-amaranth-purple pt-8">
+            <p class="text-base text-mimi-pink text-center">
+                &copy; 2025 Locaworkout. Tous droits réservés.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="main.js" nonce="__REPLACE_WITH_SECURE_NONCE__"></script>
+</body>
+</html>

@@ -50,6 +50,7 @@ The current code contains `<!-- TODO -->` placeholders for:
 - [ ] Potential Twitter account integration (`twitter:site`, `twitter:card`).
 - [ ] Actual implementation of the interactive map.
 - [ ] Backend logic for form submission (waiting list).
+- [ ] Generate and dynamically inject a secure nonce value for `<script>` tags during deployment (replace `__REPLACE_WITH_SECURE_NONCE__` in the HTML code).
 
 ## 🤝 Contribution
 
@@ -115,6 +116,7 @@ Le code actuel contient des placeholders `<!-- TODO -->` pour :
 - [ ] Intégration potentielle d'un compte Twitter (`twitter:site`, `twitter:card`).
 - [ ] Implémentation réelle de la carte interactive.
 - [ ] Logique backend pour la soumission des formulaires (liste d'attente).
+- [ ] Générer et intégrer dynamiquement une valeur de nonce sécurisée pour les balises `<script>` lors du déploiement (remplacer `__REPLACE_WITH_SECURE_NONCE__` dans le code HTML).
 
 ## 🤝 Contribution
 
